@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Level 4</title>
+    <link rel="stylesheet" href="game4.css">
+    <audio id="correctSound" src="верно.mp3"></audio>
+    <audio id="incorrectSound" src="неверно.mp3"></audio>
+</head>
+<body class="game">
+    <div class="background"></div>
+    <div id="container">
+        <canvas id="constellationCanvas"></canvas>
+        <div id="content-container">
+            <div id="problem-container">
+                <span id="num1-container"></span>
+                <div id="buttons-container">
+                    <button id="greater-than-btn" onclick="checkAnswer('>')">></button>
+                    <button id="less-than-btn" onclick="checkAnswer('<')"><</button>
+                    <button id="equal-btn" onclick="checkAnswer('=')">=</button>
+                </div>
+                <span id="num2-container"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-container">
+        <div id="message"></div>
+    </div>
+
+    <div id="results" class="results-container">
+        <!-- Результаты игры будут отображаться здесь -->
+    </div>
+
+    <script src="game4.js"></script>
+</body>
+</html>

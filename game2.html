@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game2.css">
+    <title>Улавливайте числа!</title>
+    <audio id="correctSound" src="верно.mp3"></audio>
+    <audio id="incorrectSound" src="неверно.mp3"></audio>
+    <script src="audio.js" ></script>
+</head>
+<body>
+    <div class="game-container">
+        <img src="картинки/фон.jpg" class="background" alt="Background">
+        <div id="evenUFO" class="ufo even"></div>
+        <div id="oddUFO" class="ufo odd"></div>
+        <div id="fallingNumbers"></div>
+        <div id="score">Счет: <span id="scoreValue">0</span></div>
+
+        <!-- Добавленные модальные окна -->
+        <!-- Добавленные модальные окна -->
+<div id="winModal" class="modal">
+    <div class="modal-content">
+        <p>Молодец! Ты справился!</p>
+        <p>Результаты: <span id="finalScoreWin"></span> / 10</p>
+        <button class="modal-button" onclick="resetGame()">Заново</button>
+        <button class="modal-button" onclick="nextLevel()">Следующий уровень</button>
+        <button class="modal-button" onclick="returnToLevels()">Вернуться к уровням</button>
+    </div>
+</div>
+
+<div id="loseModal" class="modal">
+    <div class="modal-content">
+        <p>Ты ошибся! Попробуй еще раз.</p>
+        <p>Результаты: <span id="finalScoreLose"></span> / 10</p>
+        <button class="modal-button" onclick="resetGame()">Заново</button>
+        <button class="modal-button" onclick="nextLevel()">Следующий уровень</button>
+        <button class="modal-button" onclick="returnToLevels()">Вернуться к уровням</button>
+        
+    </div>
+</div>
+    <script src="game2.js"></script>
+</body>
+</html>

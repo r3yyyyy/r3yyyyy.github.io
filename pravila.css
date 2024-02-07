@@ -1,0 +1,90 @@
+.content {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('картинки/e8b4cafebf9c3a684aefc88f132f4de8.gif') center/cover fixed;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.column {
+    width: 48%;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #f72b9b; /* Цвет границы */
+    border-radius: 15px; /* Радиус скругления углов */
+    background-color: rgba(105, 104, 104, 0.5); /* Черный полупрозрачный цвет внутри рамки */
+    height: 385px; /* Фиксированная высота ячейки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+h1 {
+    color: #f72b9b;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.column:nth-child(1) h1,
+.column:nth-child(2) h1{
+    margin-top: 0; /* Устанавливаем отступ сверху для уровней 1 и 2 */
+}
+.column1 {
+    width: 48%;
+    margin: 10px auto; /* Центрируем по горизонтали */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #f72b9b;
+    border-radius: 15px;
+    background-color: rgba(105, 104, 104, 0.5);
+    height: 385px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+p {
+    color: #aeadad;
+    font-size: 18px;
+}
+
+.ur {
+    margin-top: 0.5%;
+}
+button {
+    margin: 20px auto 40px; /* Автоматическое центрирование по горизонтали и отступ снизу */
+    padding: 18px 30px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #8911c5;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block; /* Чтобы применить отступы и центрирование */
+}
+
+button:hover {
+    background-color: #8725b9;
+    transform: scale(1.1);
+}
+.nazad {
+    text-align: center;
+}

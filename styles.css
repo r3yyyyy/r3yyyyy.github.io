@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('картинки/e8b4cafebf9c3a684aefc88f132f4de8.gif') center/cover fixed;
+    animation: animateBackground 30s linear infinite;
+    z-index: -1;
+}
+
+.content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.content {
+    text-align: center;
+}
+button {
+    margin: 20px 10px 0;
+    padding: 18px 30px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #8911c5;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-;
+}
+button:hover{
+    background-color: #8725b9;  
+    transform: scale(1.1);
+}
+
+
+/* Стили для чекбокс-слайдера */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Стили для округленного слайдера */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+body.levels {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Задаем высоту страницы по высоте окна браузера */
+}
+
+.content.levels {
+    margin-top: 20px; /* Отступ сверху */
+}
+
+button.levels {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Стили для кнопки "Назад" */
+button.goBack {
+    margin-top: 30px; /* Добавим отступ перед кнопкой "Назад" */
+}
+.levels-btn{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.in{
+    padding: 40px;
+    font-size: 40px;
+}
+
+
+.mat {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    animation: animateHeader 6s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для эффекта вдавливания */
+}
+
+@keyframes animateHeader {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+   
+.pravila {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Задаем цвет текста */
+    outline: none; /* Убираем выделение при нажатии */
+}
+
+.pravila:hover {
+    text-decoration: none; /* Не добавляем подчеркивание при наведении */
+}

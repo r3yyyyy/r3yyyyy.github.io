@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Carnival</title>
+    <link rel="stylesheet" href="game.css">
+    <audio id="correctSound" src="верно.mp3"></audio>
+    <audio id="incorrectSound" src="неверно.mp3"></audio>
+    <script src="audio.js"></script>
+
+</head>
+<body class="game"> 
+    <div class="background" style="background: url('https://8b08ab88-ee1b-4b04-9ae9-321e0da71ae2.selcdn.net/a022170b-d19f-47bd-b26d-cdbd71edc1d8/shutterstock1230070291w3000.jpg') center/cover fixed;"></div>
+
+    <img id="planetImage" class="planet" src="картинки/planet1.png" alt="Planet Image" width="150px">
+    <img id="planetImage2" class="planet hidden-planet" src="картинки/planet2.png" alt="Planet Image 2" width="150px">
+    <img id="planetImage3" class="planet hidden-planet" src="картинки/planet3.png" alt="Planet Image 3" width="150px">
+    <img id="asteroidImage" class="asteroid hidden-asteroid" src="картинки/asteroid.png" alt="Asteroid Image" width="100px">
+    <div id="colorOverlay" class="color-overlay"></div>
+    <div  id="gameContent" class="content game">
+        <h1 id="problem">Решите пример:</h1>
+        <div id="options">
+            <button onclick="checkAnswer(0)"></button>
+            <button onclick="checkAnswer(1)"></button>
+            <button onclick="checkAnswer(2)"></button>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <div id="resultsOverlay" class="overlay">
+        <div id="resultsContent" class="overlay-content">
+            <h2>Результаты</h2>
+            <p id="resultsText"></p>
+            <div id="buttonsContainer" class="buttons-container">
+                <button id="restartButton" onclick="restartGame()">Заново</button>
+                <button id="nextLevelButton" onclick="continueToNextLevel()">Следующий уровень</button>
+                <button id="returnToLevelsButton" onclick="returnToLevels()">Вернуться к уровням</button>
+            </div>
+        </div>
+    </div> 
+    <script src="game.js"></script>
+</body>
+</html>
